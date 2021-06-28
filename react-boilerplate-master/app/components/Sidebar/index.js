@@ -13,15 +13,18 @@ import AddBoxIcon from '@material-ui/icons/AddBox';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import AppsIcon from '@material-ui/icons/Apps';
 import ExtensionIcon from '@material-ui/icons/Extension';
+import PageviewIcon from '@material-ui/icons/Pageview';
 import UpdateIcon from '@material-ui/icons/Update';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import AssignmentLateIcon from '@material-ui/icons/AssignmentLate';
 import AssignmentReturnIcon from '@material-ui/icons/AssignmentReturn';
 import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 import Wrapper from './Wrapper';
 import useStyles from './useStyles';
+import Path from '../../configs/router';
 
-const Sidebar = ({ messages }) => {
+const Sidebar = ({ hidden, messages }) => {
   const classes = useStyles();
   const [openUser, setOpenUser] = React.useState(false);
   const [openDepartment, setOpenDepartment] = React.useState(false);
@@ -50,6 +53,7 @@ const Sidebar = ({ messages }) => {
     <List
       component="nav"
       aria-labelledby="nested-list-subheader"
+      className={!hidden ? classes.root : classes.rootHidden}
       subheader={
         <ListSubheader
           className={classes.category}
@@ -63,7 +67,6 @@ const Sidebar = ({ messages }) => {
           </div>
         </ListSubheader>
       }
-      className={classes.root}
     >
       <Wrapper />
       {/* User */}
@@ -207,7 +210,18 @@ const Sidebar = ({ messages }) => {
         unmountOnExit
       >
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested} />
+          {/* Search */}
+          <Link to={Path.APP_LOOKUP}>
+            <ListItem button className={classes.nested}>
+              <ListItemIcon>
+                <PageviewIcon className={classes.item} />
+              </ListItemIcon>
+              <ListItemText
+                className={classes.item}
+                primary={<FormattedMessage {...messages.lookUpApp} />}
+              />
+            </ListItem>
+          </Link>
         </List>
       </Collapse>
     </List>
@@ -215,6 +229,7 @@ const Sidebar = ({ messages }) => {
 };
 
 Sidebar.propTypes = {
+  hidden: PropTypes.bool,
   messages: PropTypes.object,
 };
 

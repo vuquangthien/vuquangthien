@@ -1,0 +1,15 @@
+{
+  "app.containers.LocaleToggle.en": "Tiếng Anh",
+  "app.containers.LocaleToggle.vi": "Tiếng Việt",
+  "app.containers.HomePage.sidebar.category": "Danh mục",
+  "app.containers.HomePage.sidebar.user": "Người dùng",
+  "app.containers.HomePage.sidebar.addNewUser": "Thêm mới người dùng",
+  "app.containers.HomePage.sidebar.updateUserInfo": "Cập nhật thông tin người dùng",
+  "app.containers.HomePage.sidebar.assignUser": "Gán người dùng vào đơn vị",
+  "app.containers.HomePage.sidebar.assignRole": "Gán vai trò cho người dùng",
+  "app.containers.HomePage.sidebar.assignFunc": "Gán chức năng cho người dùng",
+  "app.containers.HomePage.sidebar.department": "Phòng ban",
+  "app.containers.HomePage.sidebar.application": "Ứng dụng",
+  "app.containers.HomePage.sidebar.extension": "Tiện ích",
+  "app.containers.HomePage.sidebar.LookUpApp": "Tra cứu ứng dụng"
+}

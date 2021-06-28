@@ -1,13 +1,15 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import LocaleToggle from 'containers/LocaleToggle';
 import useStyles from './useStyles';
+import CustomMenu from './CustomMenu';
 
-export default function ButtonAppBar() {
+function HomePageAppBar({ handleClickMenu }) {
   const classes = useStyles();
 
   return (
@@ -19,15 +21,21 @@ export default function ButtonAppBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
+            onClick={handleClickMenu}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
+          <LocaleToggle />
+          <Typography variant="h6" className={classes.title} />
+          <CustomMenu />
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+
+HomePageAppBar.propTypes = {
+  handleClickMenu: PropTypes.func,
+};
+
+export default HomePageAppBar;

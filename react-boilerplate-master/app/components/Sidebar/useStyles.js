@@ -10,6 +10,21 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: `url(${SidebarImage})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
+    transition: 'all 0.4s',
+  },
+  rootHidden: {
+    position: 'fixed',
+    left: 0,
+    top: 0,
+    maxWidth: 300,
+    width: '100%',
+    height: '100vh',
+    overflow: 'hidden',
+    backgroundImage: `url(${SidebarImage})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    transform: 'translateX(-100%)',
+    transition: 'all 0.4s',
   },
   nested: {
     paddingLeft: theme.spacing(4),
@@ -17,6 +32,10 @@ const useStyles = makeStyles(theme => ({
   item: {
     color: '#d4d4d4',
     fontWeight: '100',
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+    },
   },
   category: {
     color: '#d4d4d4',

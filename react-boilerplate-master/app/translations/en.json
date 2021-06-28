@@ -1,1 +1,16 @@
-[]
+{
+  "app.containers.LocaleToggle.en": "English",
+  "app.containers.LocaleToggle.vi": "Vietnamese",
+  "app.containers.HomePage.sidebar.category": "Category",
+  "app.containers.HomePage.sidebar.user": "User",
+  "app.containers.HomePage.sidebar.addNewUser": "Add new user",
+  "app.containers.HomePage.sidebar.updateUserInfo": "Update user information",
+  "app.containers.HomePage.sidebar.assignUser": "Assign user to unit",
+  "app.containers.HomePage.sidebar.assignRole": "Assign roles to users",
+  "app.containers.HomePage.sidebar.assignFunc": "Assign functions to users",
+  "app.containers.HomePage.sidebar.department": "Department",
+  "app.containers.HomePage.sidebar.application": "Application",
+  "app.containers.HomePage.sidebar.extension": "Extension",
+  "app.containers.HomePage.sidebar.LookUpApp": "App lookup",
+  "app.containers.HomePage.content.ApplicationCode": "Application code"
+}
